@@ -143,4 +143,38 @@
       align-self: flex-end;
     }
   }
+
+  &__left--cta {
+    background: linear-gradient(to right, $lightMagenta, $lightViolet);
+    max-width: 16rem;
+
+    a {
+      text-decoration: none;
+      color: $white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    .time {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .circle {
+      border: 1px solid $white;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 100%;
+      display: inline-block;
+      margin-right: 1rem;
+    }
+
+    p {
+      color: white;
+      display: inline-block;
+    }
+  }
 }
