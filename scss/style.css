@@ -14,6 +14,7 @@ body {
   font-size: 1.9rem;
   font-weight: 200;
   background-color: #fafafa;
+  position: relative;
 }
 
 h1 {
@@ -28,7 +29,15 @@ p {
 .container {
   max-width: 144rem;
   margin: 0 auto;
+  height: 100vh;
   position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 1023px) {
+  .container {
+    height: 130vh;
+  }
 }
 
 .container::before {
@@ -51,6 +60,29 @@ p {
     width: 40rem;
     height: 90rem;
     left: -55%;
+  }
+}
+
+.container::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  right: -9%;
+  width: 50rem;
+  height: 110rem;
+  background: #f5f3f7;
+  border-radius: 1000px;
+  z-index: -1;
+}
+
+@media (max-width: 639px) {
+  .container::after {
+    width: 40rem;
+    height: 90rem;
+    bottom: -30%;
+    right: -40%;
   }
 }
 
@@ -368,7 +400,6 @@ p {
   .text {
     text-align: center;
     padding: 0 3.5rem;
-    margin-bottom: 7rem;
   }
 }
 

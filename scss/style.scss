@@ -5,7 +5,13 @@
 .container {
   max-width: 144rem;
   margin: 0 auto;
+  height: 100vh;
   position: relative;
+  overflow: hidden;
+
+  @include breakpoint-down(medium) {
+    height: 130vh;
+  }
 
   &::before {
     box-sizing: inherit;
@@ -26,25 +32,25 @@
     }
   }
 
-  // &::after {
-  //   box-sizing: inherit;
-  //   content: "";
-  //   position: absolute;
-  //   top: 0;
-  //   right: -9%;
-  //   width: 50rem;
-  //   height: 110rem;
-  //   background: $lightGrayishViolet;
-  //   border-radius: 1000px;
-  //   z-index: -1;
+  &::after {
+    box-sizing: inherit;
+    content: "";
+    position: absolute;
+    bottom: -50%;
+    right: -9%;
+    width: 50rem;
+    height: 110rem;
+    background: $lightGrayishViolet;
+    border-radius: 1000px;
+    z-index: -1;
 
-  //   @include breakpoint-down(small) {
-  //     width: 40rem;
-  //     height: 90rem;
-  //     top: 100%;
-  //     right: -50%;
-  //   }
-  // }
+    @include breakpoint-down(small) {
+      width: 40rem;
+      height: 90rem;
+      bottom: -30%;
+      right: -40%;
+    }
+  }
 }
 
 .parent {
@@ -289,7 +295,6 @@
   @include breakpoint-down(small) {
     text-align: center;
     padding: 0 3.5rem;
-    margin-bottom: 7rem;
   }
 
   h1 {
@@ -299,5 +304,8 @@
   p {
     line-height: 1.7;
     font-weight: 200;
+
+    @include breakpoint-down(small) {
+    }
   }
 }
