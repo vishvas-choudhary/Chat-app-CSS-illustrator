@@ -26,26 +26,25 @@
     }
   }
 
-  &::after {
-    box-sizing: inherit;
-    content: "";
-    position: absolute;
-    top: 0;
-    right: -9%;
-    width: 50rem;
-    height: 110rem;
-    background: $lightGrayishViolet;
-    border-radius: 1000px;
-    z-index: -1;
-    overflow: hidden;
+  // &::after {
+  //   box-sizing: inherit;
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   right: -9%;
+  //   width: 50rem;
+  //   height: 110rem;
+  //   background: $lightGrayishViolet;
+  //   border-radius: 1000px;
+  //   z-index: -1;
 
-    @include breakpoint-down(small) {
-      width: 40rem;
-      height: 90rem;
-      top: 100%;
-      right: -50%;
-    }
-  }
+  //   @include breakpoint-down(small) {
+  //     width: 40rem;
+  //     height: 90rem;
+  //     top: 100%;
+  //     right: -50%;
+  //   }
+  // }
 }
 
 .parent {

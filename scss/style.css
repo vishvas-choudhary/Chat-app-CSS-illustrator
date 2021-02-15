@@ -54,30 +54,6 @@ p {
   }
 }
 
-.container::after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-  content: "";
-  position: absolute;
-  top: 0;
-  right: -9%;
-  width: 50rem;
-  height: 110rem;
-  background: #f5f3f7;
-  border-radius: 1000px;
-  z-index: -1;
-  overflow: hidden;
-}
-
-@media (max-width: 639px) {
-  .container::after {
-    width: 40rem;
-    height: 90rem;
-    top: 100%;
-    right: -50%;
-  }
-}
-
 .parent {
   margin-top: 15rem;
   display: -webkit-box;
